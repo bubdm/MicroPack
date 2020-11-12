@@ -5,13 +5,13 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <Description>DShop Common</Description>
+    <Description>MicroPack</Description>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <AssemblyName>DShop.Common</AssemblyName>
-    <Title>Common_M66</Title>
-    <PackageId>Common_M66</PackageId>
-    <PackageTags>Common_M66</PackageTags>
-    <VersionPrefix>2.0.2</VersionPrefix>
+    <AssemblyName>MicroPack</AssemblyName>
+    <Title>MicroPack</Title>
+    <PackageId>MicroPack</PackageId>
+    <PackageTags>MicroPack</PackageTags>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Meysam</Authors>
     <Company>CompanyX</Company>
   </PropertyGroup>
