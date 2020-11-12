@@ -1,6 +1,6 @@
 # MicroPack
 
-MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.
+MicroPack is a framework for quickly and conveniently creating microservices on .NET Core 3.1.
  
 ## How to use?
 For using [this package](https://www.nuget.org/packages/MicroPack/) you can easily add it to your microservices project and use its infrastructure in your project to get rid of any annoying configuration and implement infrastructural stuff for microservice purpose. just add this command to add NuGet package:
