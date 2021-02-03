@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
 
-env:
+env: |
   Github_ID: ${{ github.run_number }}
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
