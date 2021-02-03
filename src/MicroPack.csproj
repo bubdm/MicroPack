@@ -1,22 +1,36 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <ExcludeGeneratedDebugSymbol>False</ExcludeGeneratedDebugSymbol>
+    <AssemblyName>MicroPack</AssemblyName>
+    <Authors>Meysam Hadeli</Authors>
+    <Summary>MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.</Summary>
+    <Description>MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.</Description>
+    <PackageId>MicroPack</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconFullPath>$(MSBuildThisFileDirectory)icon.png</PackageIconFullPath>
+    <PackageProjectUrl>https://github.com/meysamhadeli/MicroPack</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl> 
+    <RepositoryUrl>https://github.com/meysamhadeli/MicroPack.git</RepositoryUrl>
+    <RootNamespace>MicroPack</RootNamespace>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>'.net;c#;dotnet;dotnetcore;aspnetcore; boilerplate; application-framework; web-framework; framework;webapi; domain-driven-design;architecture;microservices;cqrs; rabbitmQ; microservices-framework; clean-architecture;docker;kubernetes;</PackageTags>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Deterministic>true</Deterministic>
+    <BaselineAllAPICompatError>true</BaselineAllAPICompatError>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-  <PropertyGroup>
-    <Description>DShop Common</Description>
-    <AssemblyName>DShop.Common</AssemblyName>
-    <Title>Common_M66</Title>
-    <PackageId>Common_M66</PackageId>
-    <PackageTags>Common_M66</PackageTags>
-    <VersionPrefix>2.0.2</VersionPrefix>
-    <Authors>Meysam</Authors>
-    <Company>CompanyX</Company>
-  </PropertyGroup>
-  <PropertyGroup>
+
+<PropertyGroup>
    <IsPackable>true</IsPackable>
 </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="App.Metrics.Core" Version="3.1.0" />
     <PackageReference Include="App.Metrics.AspNetCore" Version="3.1.0" />
