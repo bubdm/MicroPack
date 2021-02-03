@@ -12,12 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Output Run ID
+        run: echo ${{ github.run_id }}
+      - name: Output Run Number
+        run: echo ${{ github.run_number }}
 
-    - name: Bump version and push tag
-      uses: kimgault/github-tag-action@v1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        BUMP: major
-    - name: Print new build number
-      run: echo ${{ secrets.GITHUB_TOKEN }}
+      - name: Output Run ID
+        run: echo ${{ env.Github_ID }}
