@@ -20,4 +20,4 @@ jobs:
         BRANCH: master
         BUMP: major
     - name: Print new build number
-      run: echo GITHUB_TOKEN
+      run: echo ${{ secrets.GITHUB_TOKEN }}
