@@ -8,22 +8,14 @@ on:
 
 env:
   Github_ID: ${{ github.run_id }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2 
-
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Generate build number
+      uses: einaregilsson/build-number@v3
       with:
-        dotnet-version: 3.1
-
-    - name: Inject slug/short variables
-      uses: rlespinasse/github-slug-action@v3.x 
-
-    - name: Output Run ID
-      run: echo ${{ github.run_id }}
-    - name: Output Run Number
-      run: echo ${{ github.run_number }}
+        token: ${{secrets.github_token}}        
+    - name: Print new build number
+      run: echo "Build number is $BUILD_NUMBER"
+      # Or, if you're on Windows: echo "Build number is ${env:BUILD_NUMBER}"}
