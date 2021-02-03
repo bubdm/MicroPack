@@ -23,32 +23,7 @@ jobs:
     - name: Inject slug/short variables
       uses: rlespinasse/github-slug-action@v3.x 
 
-    - name: build
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        MYGET_API_KEY: ${{ secrets.MYGET_API_KEY }}
-        MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        Branch_Name: ${{ env.GITHUB_REF_SLUG }}
-        Github_ID: ${{ env.Github_ID }}
-      run: |
-       sh ./scripts/dotnet-build-micro-pack.sh
-
-    - name: Publish
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        MYGET_API_KEY: ${{ secrets.MYGET_API_KEY }}
-        MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        Branch_Name: ${{ env.GITHUB_REF_SLUG }}
-        Github_ID: ${{ env.Github_ID }}
-      run: |
-       sh ./scripts/dotnet-pack-micro-pack.sh
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-          name: nupkg
-          path: ./src/MicroPack/bin/Release/*.nupkg
+    - name: Output Run ID
+      run: echo ${{ github.run_id }}
+    - name: Output Run Number
+      run: echo ${{ github.run_number }}
