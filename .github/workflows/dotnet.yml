@@ -9,7 +9,14 @@ on:
 
 jobs:
   build:
-   
+    env:
+       Github_ID: ${{ github.run_number }}
+       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+       MYGET_API_KEY: ${{ secrets.MYGET_API_KEY }}
+       MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
+       NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+       
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2 
@@ -21,20 +28,16 @@ jobs:
 
     - name: Inject slug/short variables
       uses: rlespinasse/github-slug-action@v3.x 
-    - env: 
-       Github_ID: ${{ github.run_number }}
-       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-       MYGET_API_KEY: ${{ secrets.MYGET_API_KEY }}
-       MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
-       NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-       Branch_Name: ${{ env.GITHUB_REF_SLUG }}
-   
+  
     - name: build
+      env:
+        Branch_Name: ${{ env.GITHUB_REF_SLUG }}
       run: |
        sh ./scripts/dotnet-build-micro-pack.sh
 
     - name: Publish
+      env:
+        Branch_Name: ${{ env.GITHUB_REF_SLUG }}
       run: |
        sh ./scripts/dotnet-pack-micro-pack.sh
 
