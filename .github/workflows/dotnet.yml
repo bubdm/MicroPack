@@ -31,7 +31,7 @@ jobs:
         MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         Branch_Name: ${{ env.GITHUB_REF_SLUG }}
-        Github_ID: ${{ github.run_id  }}
+        Github_ID: ${{ env.Github_ID }}
       run: |
        sh ./scripts/dotnet-build-micro-pack.sh
 
@@ -43,7 +43,7 @@ jobs:
         MYGET_DEV_API_KEY: ${{ secrets.MYGET_DEV_API_KEY }}
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         Branch_Name: ${{ env.GITHUB_REF_SLUG }}
-        Github_ID: ${{ github.run_id }}
+        Github_ID: ${{ env.Github_ID }}
       run: |
        sh ./scripts/dotnet-pack-micro-pack.sh
 
