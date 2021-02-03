@@ -12,10 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Output Run ID
-        run: echo ${{ github.run_id }}
-      - name: Output Run Number
-        run: echo ${{ github.run_number }}
+      - name: Increment Step Major
+        id: increment-semver-major
+        uses: Benbentwo/increment-semver@master
+        with:
+          version-level: '-M'
 
-      - name: Output Run ID
-        run: echo ${{ env.Github_ID }}
+      # Use the output from the `Increment Step X` step
+      - name: Get the output version
+        run: |
+          echo "The new Major version was ${{ steps.increment-semver-major.outputs.version }}"
