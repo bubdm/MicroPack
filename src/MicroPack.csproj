@@ -9,8 +9,6 @@
     <Summary>MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.</Summary>
     <Description>MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.</Description>
     <PackageId>MicroPack</PackageId>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageIconFullPath>$(MSBuildThisFileDirectory)icon.png</PackageIconFullPath>
     <PackageProjectUrl>https://github.com/meysamhadeli/MicroPack</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl> 
     <RepositoryUrl>https://github.com/meysamhadeli/MicroPack.git</RepositoryUrl>
@@ -30,10 +28,6 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <Optimize>true</Optimize>
   </PropertyGroup>
-
-   <ItemGroup>
-    <None Include="$(PackageIconFullPath)" Pack="true" PackagePath="\"/>
-  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="App.Metrics.Core" Version="3.1.0" />
