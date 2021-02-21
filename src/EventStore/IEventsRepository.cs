@@ -6,7 +6,7 @@ namespace MicroPack.EventStore
     public interface IEventsRepository<TA, in TKey>
         where TA : class, IAggregateRoot<TKey>
     {
-        Task AppendAsync(TA aggregateRoot);
-        Task<TA> RehydrateAsync(TKey key);
+        Task SaveAsync(TA aggregateRoot);
+        Task<TA> GetByIdAsync(TKey key);
     }
 }

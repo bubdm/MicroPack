@@ -24,7 +24,7 @@ namespace MicroPack.EventStore
             _streamBaseName = aggregateType.Name;
         }
 
-        public async Task AppendAsync(TA aggregateRoot)
+        public async Task SaveAsync(TA aggregateRoot)
         {
             if (null == aggregateRoot)
                 throw new ArgumentNullException(nameof(aggregateRoot));
@@ -64,7 +64,7 @@ namespace MicroPack.EventStore
             return streamName;
         }
 
-        public async Task<TA> RehydrateAsync(TKey key)
+        public async Task<TA> GetByIdAsync(TKey key)
         {
             var connection = await _connectionWrapper.GetConnectionAsync();
             

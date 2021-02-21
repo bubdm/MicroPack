@@ -22,14 +22,14 @@ namespace MicroPack.EventStore
             if (!aggregateRoot.Events.Any())
                 return;
 
-            await _eventsRepository.AppendAsync(aggregateRoot);
+            await _eventsRepository.SaveAsync(aggregateRoot);
 
             aggregateRoot.ClearEvents();
         }
 
         public Task<TA> GetByIdAsync(TKey key)
         {
-            return _eventsRepository.RehydrateAsync(key);
+            return _eventsRepository.GetByIdAsync(key);
         }
     }
 }
