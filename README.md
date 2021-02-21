@@ -31,7 +31,7 @@ If you like or are using this repository to learn or start your solution, please
 * Jaeger
 * Prometheus
 * DDD
-* EventStore
+* EventSourcing
 * Clean Architecture
 * SignalR
 * Seq
