@@ -13,6 +13,9 @@ For using [this package](https://www.nuget.org/packages/MicroPack/) you can easi
 dotnet add package MicroPack
 ```
 
+## Give a Star! ⭐️
+If you like or are using this repository to learn or start your solution, please give it a star. Thanks!
+
 ## Thecnologies & Stack
 ----------------
 * .Net Core 3.1
@@ -40,7 +43,3 @@ dotnet add package MicroPack
 -  [ ] Integration with Service Mesh and Istio
 -  [ ] Integration with Marten and Event Sourcing
 -  [ ] Integration with MediateR
-
-## Show your support
-----------------
-Please ⭐️ this repository if this project helped you!
