@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using MicroPack.Domain;
+using MicroPack.Types;
 using Newtonsoft.Json;
 
 namespace MicroPack.EventStore

@@ -1,5 +1,4 @@
 using System;
-using MicroPack.MicroPack;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;

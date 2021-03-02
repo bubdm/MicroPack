@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 
 namespace MicroPack.MessageBrokers.Outbox.Messages
 {

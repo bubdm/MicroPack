@@ -1,4 +1,4 @@
-﻿using MicroPack.Domain;
+﻿using MicroPack.Types;
 
 namespace MicroPack.EventStore
 {

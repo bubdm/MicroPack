@@ -1,6 +1,5 @@
 using MicroPack.MessageBrokers.Outbox.Messages;
 using MicroPack.MessageBrokers.Outbox.Mongo.Internals;
-using MicroPack.MicroPack;
 using MicroPack.Mongo;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson.Serialization;
@@ -23,7 +22,7 @@ namespace MicroPack.MessageBrokers.Outbox.Mongo
 
             services.AddMongoRepository<InboxMessage, string>(inboxCollection);
             services.AddMongoRepository<OutboxMessage, string>(outboxCollection);
-            services.BuildServiceProvider().AddInitializer<MongoOutboxInitializer>();
+            services.AddInitializers(typeof(MongoOutboxInitializer));
             services.AddTransient<IMessageOutbox, MongoMessageOutbox>();
             services.AddTransient<IMessageOutboxAccessor, MongoMessageOutbox>();
             services.AddTransient<MongoOutboxInitializer>();

@@ -1,5 +1,5 @@
 using System;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 
 namespace MicroPack.MessageBrokers.Outbox.Messages
 {

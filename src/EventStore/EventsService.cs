@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MicroPack.Domain;
+using MicroPack.Types;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace MicroPack.EventStore

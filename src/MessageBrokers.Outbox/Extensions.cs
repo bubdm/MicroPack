@@ -2,7 +2,6 @@ using System;
 using MicroPack.MessageBrokers.Outbox.Configurators;
 using MicroPack.MessageBrokers.Outbox.Outbox;
 using MicroPack.MessageBrokers.Outbox.Processors;
-using MicroPack.MicroPack;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroPack.MessageBrokers.Outbox

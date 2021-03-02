@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using MicroPack.Domain;
+using MicroPack.Types;
 
 namespace MicroPack.EventStore
 {

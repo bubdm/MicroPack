@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EventStore.ClientAPI;
-using MicroPack.Domain;
+using MicroPack.Types;
 
 namespace MicroPack.EventStore
 {

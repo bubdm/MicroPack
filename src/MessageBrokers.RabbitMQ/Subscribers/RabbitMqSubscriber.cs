@@ -3,7 +3,6 @@ using System.Collections.Concurrent;
 using System.Text;
 using System.Threading.Tasks;
 using MicroPack.MessageBrokers.RabbitMQ.Plugins;
-using MicroPack.MicroPack;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Polly;

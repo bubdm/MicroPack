@@ -1,5 +1,4 @@
 using System;
-using MicroPack.MicroPack;
 using MicroPack.Redis.Builders;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;

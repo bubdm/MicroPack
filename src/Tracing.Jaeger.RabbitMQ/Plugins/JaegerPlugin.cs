@@ -3,7 +3,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Jaeger;
 using MicroPack.MessageBrokers.RabbitMQ;
-using MicroPack.MicroPack;
 using OpenTracing;
 using OpenTracing.Tag;
 using RabbitMQ.Client.Events;

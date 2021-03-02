@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using MicroPack.MessageBrokers.Outbox.Messages;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 using MongoDB.Driver;
 
 namespace MicroPack.MessageBrokers.Outbox.Mongo.Internals

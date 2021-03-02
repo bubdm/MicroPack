@@ -1,4 +1,4 @@
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 
 namespace MicroPack.CQRS.Events
 {

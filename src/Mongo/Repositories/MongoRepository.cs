@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using MicroPack.CQRS.Queries;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 

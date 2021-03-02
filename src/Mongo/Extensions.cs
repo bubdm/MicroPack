@@ -1,11 +1,10 @@
 using System;
-using MicroPack.MicroPack;
-using MicroPack.MicroPack.Types;
 using MicroPack.Mongo.Builders;
 using MicroPack.Mongo.Factories;
 using MicroPack.Mongo.Initializers;
 using MicroPack.Mongo.Repositories;
 using MicroPack.Mongo.Seeders;
+using MicroPack.Types;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -75,8 +74,7 @@ namespace MicroPack.Mongo
                 services.AddTransient(typeof(IMongoDbSeeder), seederType);
             }
             
-            
-            services.BuildServiceProvider().AddInitializer<IMongoDbInitializer>();
+            services.AddInitializers(typeof(IMongoDbInitializer));
             
             if (registerConventions && !_conventionsRegistered)
             {

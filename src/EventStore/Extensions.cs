@@ -1,6 +1,5 @@
 ﻿using System;
-using MicroPack.Domain;
-using MicroPack.MicroPack;
+using MicroPack.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 

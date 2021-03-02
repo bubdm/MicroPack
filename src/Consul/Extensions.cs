@@ -6,7 +6,7 @@ using MicroPack.Consul.MessageHandlers;
 using MicroPack.Consul.Models;
 using MicroPack.Consul.Services;
 using MicroPack.Http;
-using MicroPack.MicroPack;
+using MicroPack.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroPack.Consul
@@ -64,8 +64,8 @@ namespace MicroPack.Consul
             return services;
         }
 
-        public static void AddConsulHttpClient(this IConveyBuilder builder, string clientName, string serviceName)
-            => builder.Services.AddHttpClient<IHttpClient, ConsulHttpClient>(clientName)
+        public static void AddConsulHttpClient(this IServiceCollection services, string clientName, string serviceName)
+            => services.AddHttpClient<IHttpClient, ConsulHttpClient>(clientName)
                 .AddHttpMessageHandler(c => new ConsulServiceDiscoveryMessageHandler(
                     c.GetService<IConsulServicesRegistry>(),
                     c.GetService<ConsulOptions>(), serviceName, true));

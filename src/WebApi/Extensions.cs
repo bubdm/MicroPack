@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Web;
 using MicroPack.CQRS.Commands;
 using MicroPack.CQRS.Queries;
-using MicroPack.MicroPack;
+using MicroPack.Types;
 using MicroPack.WebApi.Exceptions;
 using MicroPack.WebApi.Formatters;
 using MicroPack.WebApi.Requests;
@@ -63,6 +63,20 @@ namespace MicroPack.WebApi
             {
                 sectionName = SectionName;
             }
+            
+            var appOptions = services.GetOptions<AppOptions>(sectionName);
+            services.AddMemoryCache();
+            services.AddSingleton(appOptions);
+            services.AddSingleton<IServiceId, ServiceId>();
+            services.AddSingleton<IStartupInitializer,StartupInitializer>();
+
+            if (!appOptions.DisplayBanner || string.IsNullOrWhiteSpace(appOptions.Name))
+            {
+                return services;
+            }
+
+            var version = appOptions.DisplayVersion ? $" {appOptions.Version}" : string.Empty;
+            Console.WriteLine(Figgle.FiggleFonts.Doom.Render($"{appOptions.Name}{version}"));            
 
             if (jsonSerializer is null)
             {

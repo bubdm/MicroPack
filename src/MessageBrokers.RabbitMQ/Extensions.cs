@@ -11,7 +11,6 @@ using MicroPack.MessageBrokers.RabbitMQ.Plugins;
 using MicroPack.MessageBrokers.RabbitMQ.Publishers;
 using MicroPack.MessageBrokers.RabbitMQ.Serializers;
 using MicroPack.MessageBrokers.RabbitMQ.Subscribers;
-using MicroPack.MicroPack;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -92,8 +91,8 @@ namespace MicroPack.MessageBrokers.RabbitMQ
             var connection = connectionFactory.CreateConnection(options.HostNames.ToList(), options.ConnectionName);
             logger.LogDebug($"Connected to RabbitMQ: '{string.Join(", ", options.HostNames)}'.");
             services.AddSingleton(connection);
-            services.BuildServiceProvider().AddInitializer<RabbitMqExchangeInitializer>();
-
+            services.AddInitializers(typeof(RabbitMqExchangeInitializer));
+            
             ((IRabbitMqPluginsRegistryAccessor) pluginsRegistry).Get().ToList().ForEach(p =>
                 services.AddTransient(p.PluginType));
 

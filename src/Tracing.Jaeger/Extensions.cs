@@ -5,7 +5,6 @@ using Jaeger.Reporters;
 using Jaeger.Samplers;
 using Jaeger.Senders;
 using Jaeger.Senders.Thrift;
-using MicroPack.MicroPack;
 using MicroPack.Tracing.Jaeger.Builders;
 using MicroPack.Tracing.Jaeger.Tracers;
 using Microsoft.AspNetCore.Builder;

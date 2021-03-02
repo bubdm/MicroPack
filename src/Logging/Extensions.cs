@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using MicroPack.Logging.Options;
-using MicroPack.MicroPack;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -147,13 +146,6 @@ namespace MicroPack.Logging
             => Enum.TryParse<LogEventLevel>(level, true, out var logLevel) 
                 ? logLevel
                 : LogEventLevel.Information;
-
-        public static IConveyBuilder AddCorrelationContextLogging(this IConveyBuilder builder)
-        {
-            builder.Services.AddTransient<CorrelationContextLoggingMiddleware>();
-            
-            return builder;
-        }
         
         public static IApplicationBuilder UserCorrelationContextLogging(this IApplicationBuilder app)
         {

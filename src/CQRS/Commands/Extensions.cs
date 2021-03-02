@@ -1,6 +1,6 @@
 using System;
 using MicroPack.CQRS.Commands.Dispatchers;
-using MicroPack.MicroPack.Types;
+using MicroPack.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroPack.CQRS.Commands
