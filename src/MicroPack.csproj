@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/meysamhadeli/MicroPack.git</RepositoryUrl>
     <RootNamespace>MicroPack</RootNamespace>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>'.net;c#;dotnet;dotnetcore;aspnetcore; boilerplate; application-framework; web-framework; framework;webapi; domain-driven-design;architecture;microservices;cqrs; rabbitmQ; microservices-framework; clean-architecture;docker;kubernetes;</PackageTags>
+    <PackageTags>'.net;c#;dotnet;dotnetcore;aspnetcore; application-framework; web-framework; framework;webapi; domain-driven-design;architecture;microservices;cqrs; rabbitmQ; microservices-framework; clean-architecture;docker;kubernetes;event-sourcing</PackageTags>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Deterministic>true</Deterministic>
     <BaselineAllAPICompatError>true</BaselineAllAPICompatError>
