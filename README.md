@@ -42,4 +42,3 @@ If you like or are using this repository to learn or start your solution, please
 ----------------
 -  [ ] Create samples for this framework
 -  [ ] Integration with Service Mesh and Istio
--  [ ] Integration with MediateR
