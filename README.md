@@ -1,6 +1,6 @@
 # MicroPack
 
-MicroPack is a framework for quickly and conveniently creating microservices on .NET Core.
+MicroPack is a framework with many capabilities for using microservices on .net core.
  
 [![Actions Status](https://github.com/meysamhadeli/MicroPack/workflows/build/badge.svg?branch=master)](https://github.com/meysamhadeli/MicroPack/actions)
 <a href="https://www.nuget.org/packages/MicroPack/" alt="nuget package"><img src="https://img.shields.io/nuget/vpre/micropack" /></a>
